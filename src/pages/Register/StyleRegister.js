@@ -14,14 +14,8 @@ export default StyleSheet.create({
    
   },
   sectionStart: {
- 
-    
     alignItems: "center",
-
- 
-
     height: "17%",
-    
   },
   logo : {
     marginTop: 40,
