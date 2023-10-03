@@ -1,9 +1,30 @@
-import React from "react";
-import { Button, TextInput, View, Text, Image, TouchableHighlight } from "react-native";
+import React ,{useState} from "react";
+import { Button, TextInput, View, Text, Image, TouchableHighlight, ScrollView } from "react-native";
 import styles from "./StyleRegister";
+import * as ImagePicker from "expo-image-picker";
 
 export default function Register({ navigation }) {
+  const [image, setImage] = useState(null);
+
+  const pickImage = async () => {
+    // No permissions request is necessary for launching the image library
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    console.log(result);
+
+    if (!result.canceled) {
+      setImage(result.assets[0].uri);
+    }
+  };
+
+
   return (
+     <ScrollView>
     <View style={styles.container}>
       <View style={styles.sectionStart}>
        
@@ -25,6 +46,16 @@ export default function Register({ navigation }) {
         <TextInput style={styles.input} placeholder="Correo" />
         <Text style={styles.label}>Contraseña</Text>
         <TextInput style={styles.input} placeholder="Contraseña" />
+         <View style={styles.label}>
+          <Text style={styles.label}>Foto de perfil</Text>
+            <View style={styles.imageContainer}>
+              {image && <Image source={{ uri: image }} style={styles.image} />}
+            </View>
+        <Button title="Agregar imagen" onPress={pickImage}  color="#210749" />
+       
+        </View>
+
+
         <Button title="Registrarse" color="#6932B9" />
       </View>
 
@@ -36,5 +67,6 @@ export default function Register({ navigation }) {
       </TouchableHighlight>
       </View>
     </View>
+    </ScrollView>
   );
 }

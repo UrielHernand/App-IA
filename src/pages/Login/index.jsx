@@ -1,9 +1,10 @@
 import React from "react";
-import { Button, TextInput, View, Text, Image, TouchableOpacity } from "react-native";
+import { Button, TextInput, View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
 import styles from "./StyleLogin";
 
 export default function Login({ navigation }) {
   return (
+    <ScrollView>
     <View style={styles.container}>
       <View style={styles.sectionStart}>
       
@@ -37,5 +38,6 @@ export default function Login({ navigation }) {
       </TouchableOpacity>
       </View>
     </View>
+    </ScrollView>
   );
 }

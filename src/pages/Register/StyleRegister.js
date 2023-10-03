@@ -8,19 +8,19 @@ export default StyleSheet.create({
   
    
     backgroundColor: "white",
-    height: "130%",
+    height: "auto",
     width: "100%",
     padding: 10,
    
   },
   sectionStart: {
     alignItems: "center",
-    height: "17%",
+    height: "auto",
   },
   logo : {
-    marginTop: 40,
+  
     width: "100%",
-    height: "100%",
+    height: "auto",
     alignItems: "center",
     justifyContent: "center",
 
@@ -29,7 +29,7 @@ export default StyleSheet.create({
   startText: {
     fontSize: 24,
     fontWeight: "bold",
-  marginTop: 80,
+
     color: "#6932B9",
 
   },
@@ -46,9 +46,27 @@ export default StyleSheet.create({
 
   
   },
+  imageContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 10,
+   
+   
+    borderColor: "#ccc",
+
+  },
+  image: {
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+    borderColor: "#ccc",
+    borderWidth: 1,
+   
+  },
   label: {
     fontSize: 16,
-    marginBottom: 2,
+    margin: 2,
+
   },
   input: {
     fontSize: 16,

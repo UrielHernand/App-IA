@@ -6,7 +6,7 @@ export default StyleSheet.create({
 
     alignItems: "center",
     backgroundColor: "white",
-    height: "130%",
+    height: "auto",
     width: "100%",
     padding: 10,
    
@@ -17,22 +17,22 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "white",
-    height: "17%",
-    marginTop: 20,
+    height: "auto",
+
     
   },
   startText: {
     fontSize: 24,
     fontWeight: "bold",
-    marginTop: 70,
+   
  
     color: "#6932B9",
 
   },
   logo: {
-    marginTop: 40,
+
     width: "100%",
-    height: "100%",
+    height: "auto",
     alignItems: "center",
     justifyContent: "center",
   },
